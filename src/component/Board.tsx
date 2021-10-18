@@ -301,7 +301,7 @@ const Board: React.FC = () => {
               <TableRow key={l[0]+Math.random()-Math.random()}>
                 {l.map(ll => (
                   <TableCellStyled align="center" number={ll}>
-                    <Number>{ll}</Number>
+                    <Number number={ll}>{ll}</Number>
                   </TableCellStyled>
                 ))}
               </TableRow>
@@ -355,6 +355,7 @@ const TableCellStyled = styled(TableCell)(({ number }: numberprop) => ({
   color:"black",
   width: "auto",
 }));
-const Number = styled("span")(() => ({
-  fontSize: "large"
+const Number = styled("span")(({number}:numberprop) => ({
+  fontSize: "large",
+  visibility: number===0 ? "hidden" : "visible"
 }));
