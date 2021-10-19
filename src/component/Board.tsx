@@ -278,17 +278,14 @@ const Board: React.FC = () => {
 
   const initialize = () => {
     let newGrid = cloneDeep(boardnumbers);
-    console.log(newGrid);
     addNumber(newGrid);
-    console.table(newGrid);
     addNumber(newGrid);
-    console.table(newGrid);
     setboardnumbers(newGrid);
   };
 
   useEffect(() => {
     initialize();
-  }, []);
+  });
 
   return (
       <Container>

@@ -26,9 +26,11 @@ const HomeInnerContainer = styled("div")(()=>({
     width: "40%",
     padding:"3.5rem",
     margin :"0 auto",
+    // eslint-disable-next-line
     ["@media (max-width:780px)"]:{
         width:"60%"
     },
+    // eslint-disable-next-line
     ["@media (max-width:425px)"]:{
         width:"100%"
     },
