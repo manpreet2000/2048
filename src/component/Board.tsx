@@ -282,10 +282,10 @@ const Board: React.FC = () => {
     addNumber(newGrid);
     setboardnumbers(newGrid);
   };
-
   useEffect(() => {
     initialize();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   return (
       <Container>
@@ -326,7 +326,8 @@ const Reset = styled("div")(({theme})=>({
     borderRadius:"15px",
     marginBottom:"20px",
     backgroundColor:theme.palette.primary.light,
-    color:theme.palette.text.secondary
+    color:theme.palette.text.secondary,
+    cursor:"pointer"
 }));
 const TableContainerStyled = styled(TableContainer)(({ theme }) => ({
   height: "100%",
