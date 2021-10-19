@@ -10,6 +10,7 @@ import {
 import cloneDeep from "lodash.clonedeep";
 import { useEvent } from "../Hooks/event";
 import {getColors} from "../util/colors";
+import {Controller} from "./";
 
 const Board: React.FC = () => {
   const [boardnumbers, setboardnumbers] = useState([
@@ -306,6 +307,7 @@ const Board: React.FC = () => {
           </TableBody>
         </TableStyled>
       </TableContainerStyled>
+      <Controller swipeUp={swipeUp} swipeDown={swipeDown} swipeLeft={swipeLeft} swipeRight={swipeRight} />
       </Container>
   );
 };
